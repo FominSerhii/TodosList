@@ -4,9 +4,8 @@
 
   .todo-card{
     display: inline-block;
-    width: 20%;
   }
 
   .todo-card-item{
-    padding: 1em;
+    padding: 15px;
   }

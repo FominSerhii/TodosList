@@ -3,7 +3,12 @@ import { StoreModule } from '@ngrx/store';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule , MatRadioModule, MatInputModule, MatCardModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatRadioModule,
+  MatInputModule,
+  MatCardModule,
+  MatIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { reducers } from './store/reducers.models';
@@ -23,6 +28,7 @@ import { TodoListItemComponent } from './todos/components/todo-list-item/todo-li
     FormsModule,
     BrowserModule,
     MatCardModule,
+    MatIconModule,
     MatRadioModule,
     MatInputModule,
     MatButtonModule,

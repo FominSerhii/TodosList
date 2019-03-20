@@ -5,6 +5,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './new-todo.component.html',
   styleUrls: ['./new-todo.component.css']
 })
+
 export class NewTodoComponent implements OnInit {
   @Output() onCreateTodo;
   newTodo: string;

@@ -1,11 +1,14 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 import { Todo } from '../../models/todos.models';
+
 @Component({
   selector: 'app-todo-list-item',
   templateUrl: './todo-list-item.component.html',
   styleUrls: ['./todo-list-item.component.css']
 })
 export class TodoListItemComponent implements OnInit {
+
   @Input()  todo: Todo;
   @Output() compeletedTodo: EventEmitter<Todo>;
   @Output() deletedTodo: EventEmitter<Todo>;
