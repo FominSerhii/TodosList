@@ -3,30 +3,33 @@
 
   <app-todo-list
     [todos]="todos | async"
-    (completedTodo)="onCompletedTodo($event)"
-    (deletedTodo)="onDeletedTodo($event)"
-    (editTodo)="onEditTodo($event)"
-    (updateTodo)="onUpdateTodo($event)">
+    (click)="onCompletedTodo($event)"
+    (click)="onDeletedTodo($event)"
+    (click)="onEditTodo($event)"
+    (click)="onUpdateTodo($event)">
   </app-todo-list>
 
   <mat-radio-group
     *ngIf="(todos | async)?.length"
     class="todo-filter-group"
     [(ngModel)]="SelectedFilter">
+
     <mat-radio-button
-      class="todo-filter-button"
       [value]="'All'"
       (click)="onShow('All')"
       checked="true">
       All
     </mat-radio-button>
+
     <mat-radio-button
-      class="todo-filter-button"
       [value]="'Pending'"
       (click)="onShow('Pending')">
       Pending
     </mat-radio-button>
-    <mat-radio-button  [value]="'Complete'" (click)="onShow('Complete')">
+
+    <mat-radio-button
+      [value]="'Complete'"
+      (click)="onShow('Complete')">
       Complete
     </mat-radio-button>
   </mat-radio-group>
