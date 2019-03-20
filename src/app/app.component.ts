@@ -16,6 +16,7 @@ export class AppComponent {
   title = 'app';
   todos: Observable<Array<Todo>>;
   constructor(private store: Store<IAppStore>) {
+
     this.todos = this.store.select('todos');
     this.store.subscribe((state) => {
       console.log('state', state);
@@ -23,7 +24,7 @@ export class AppComponent {
   }
 
   onAddTodo(newTodo) {
-      this.store.dispatch(new TodoActions.AddTodo(newTodo.text));
+    this.store.dispatch(new TodoActions.AddTodo(newTodo.text));
   }
 
   onCompletedTodo(todo) {

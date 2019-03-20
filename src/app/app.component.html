@@ -20,7 +20,10 @@
       checked="true">
       All
     </mat-radio-button>
-    <mat-radio-button  class="todo-filter-button" [value]="'Pending'" (click)="onShow('Pending')">
+    <mat-radio-button
+      class="todo-filter-button"
+      [value]="'Pending'"
+      (click)="onShow('Pending')">
       Pending
     </mat-radio-button>
     <mat-radio-button  [value]="'Complete'" (click)="onShow('Complete')">
